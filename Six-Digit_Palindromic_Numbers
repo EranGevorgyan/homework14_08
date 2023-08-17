@@ -1,0 +1,11 @@
+ls = []
+p = []
+
+for i in range(100000, 1000000):
+    if i // 100000 == i % 10 and i // 10000 % 10 == i % 100 // 10 and i // 1000 % 10 == i % 1000 // 100:
+        ls.append(i)
+for j in range(len(ls) - 1):
+    if ls[j + 1] - ls[j] <= 20: 
+        p.append([ls[j], ls[j + 1]]) 
+print(p)  
+        
